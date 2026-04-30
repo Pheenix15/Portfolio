@@ -1,0 +1,61 @@
+$mainBlack: #0a0a0a;
+$secondBlack: #2b2b2b;
+$mainWhite: #fff;
+$secondWhite: #F5F7FA;
+$transparentBlack: #0a0a0abc;
+$headingFont: "Days One", sans-serif;
+$textFont: "Courier Prime", monospace;
+$mobilePadding: 0 10px;
+
+@mixin page-padding {
+    padding: 0 40px;
+}
+
+@mixin button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 20px;
+    background-color: $secondWhite;
+    color: $secondBlack;
+    font-family: $headingFont;
+    cursor: pointer;
+}
+
+@mixin button-alt {
+    border: 1px solid $secondWhite;
+    border-radius: 8px;
+    padding: 11px 20px;
+    background-color: transparent;
+    color: $secondWhite;
+    font-family: $headingFont;
+    cursor: pointer;
+}
+
+@mixin watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    opacity: 0.1;
+    user-select: none;
+}
+
+@mixin scene {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin step {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}

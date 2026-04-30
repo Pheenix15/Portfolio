@@ -1,0 +1,39 @@
+@use "variables";
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-scene {
+  @include variables.scene;
+}
+
+.about-step {
+  @include variables.step
+}
+
+.about-text {
+    font-size: 1.2em;
+    max-width: 600px;
+}
+
+/* Step 1: Intro with watermark */
+.about-intro {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Step 2: Image sequence */
+.sequence-canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.second-about-text {
+    position: absolute;
+    bottom: 0;        // anchored to bottom before animation drives it up
+    left: 0;
+    width: 100%;
+}
+

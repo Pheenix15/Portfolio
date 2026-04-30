@@ -1,0 +1,90 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.hero-text {
+  box-sizing: border-box;
+  padding: 0 40px;
+  align-self: center;
+  width: 80%;
+  margin-top: 5%;
+}
+
+.hero-text .hello {
+  font-family: "Courier Prime", monospace;
+  font-size: 24px;
+}
+
+.hero-text .name {
+  font-family: "Days One", sans-serif;
+  font-size: 96px;
+}
+
+.hero-text .title {
+  font-family: "Courier Prime", monospace;
+  font-size: 40px;
+  letter-spacing: 30%;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+.hero-portfolio {
+  border: 1px solid #F5F7FA;
+  border-radius: 8px;
+  padding: 11px 20px;
+  background-color: transparent;
+  color: #F5F7FA;
+  font-family: "Days One", sans-serif;
+  cursor: pointer;
+}
+
+.hero-image {
+  position: absolute;
+  width: 419px;
+  right: 0px;
+  bottom: 0;
+  z-index: -10;
+}
+
+@media (max-width: 812px) {
+  .hero-text {
+    width: 85%;
+  }
+}
+@media (max-width: 762px) {
+  .hero-text .hello {
+    font-size: 20px;
+  }
+  .hero-text .name {
+    font-size: 75px;
+  }
+  .hero-text .title {
+    font-size: 30px;
+    letter-spacing: 34%;
+  }
+}
+@media (max-width: 597px) {
+  .hero-text {
+    padding: 0 10px;
+    width: 100%;
+    margin-top: 22%;
+  }
+  .hero-text .name {
+    font-size: 13vw;
+  }
+  .hero-text .title {
+    font-size: 5vw;
+  }
+}
+@media (max-width: 335px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+}/*# sourceMappingURL=IntroScene.css.map */
