@@ -37,6 +37,8 @@ function App() {
         {/* Debug overlay */}
         <div className="debug-overlay">
           <span>Progress: {progress.toFixed(4)}</span>
+
+          <div className="contra-hire-me-button" data-analyticsUserId="467a11d9-9412-43c9-a031-26f42152ab6d" data-theme="dark" data-username="pheenix_web"></div><script async src="https://contra.com/static/embed/sdk.js" charSet="utf-8"></script>
         </div>
       </div>
     </>
