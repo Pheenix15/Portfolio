@@ -1,11 +1,12 @@
 @use "variables";
 
-.projects-scene {
+.project-scene {
     @include variables.scene;
 }
 
-.projects-step {
+.project-step {
     @include variables.step;
+    //opacity: 0; /*All steps start hidden*/
 }
 
 
@@ -14,6 +15,7 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 0;
+    opacity: 0;
 }
 
 .project-image {

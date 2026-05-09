@@ -1,4 +1,7 @@
 @use "variables";
+.hero-scene {
+    @include variables.scene;
+}
 
 .hero {
     position: relative;
@@ -38,13 +41,13 @@
 }
 
 .hero-portfolio {
-    @include variables.button-alt;
+    @include variables.alt-button;
 }
 
 // Hero Image
 .hero-image {
     position: absolute;
-    width: 419px;
+    width: 70%;
     right: 0px;
     bottom: 0;
     z-index: -10;
@@ -82,6 +85,13 @@
 
     .hero-text .title {
         font-size: 5vw;
+    }
+}
+
+@media (max-width: 426px) {
+    .hero-image {
+        width: 100%;
+        right: -50px;
     }
 }
 

@@ -20,14 +20,26 @@ p {
   margin: 0;
 }
 
-button {
-  border: none;
+.button {
+  border: 1px solid transparent;
   border-radius: 8px;
   padding: 11px 20px;
   background-color: #F5F7FA;
   color: #2b2b2b;
   font-family: "Days One", sans-serif;
   cursor: pointer;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-out;
+}
+
+.alt-button {
+  border: 1px solid #F5F7FA;
+  border-radius: 8px;
+  padding: 11px 20px;
+  background-color: transparent;
+  color: #F5F7FA;
+  font-family: "Days One", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border 0.5s ease-out;
 }
 
 section {
@@ -46,8 +58,11 @@ section {
 }
 
 @media (hover: hover) {
-  button:hover {
-    background-color: #0a0a0a;
+  .button:hover {
+    background-color: #2b2b2b;
     color: #F5F7FA;
+  }
+  .alt-button:hover {
+    border: 1px solid #2b2b2b;
   }
 }/*# sourceMappingURL=index.css.map */

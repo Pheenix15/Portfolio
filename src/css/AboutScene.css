@@ -13,6 +13,7 @@
 }
 
 .about-step {
+  box-sizing: border-box;
   position: absolute;
   display: flex;
   align-items: center;
@@ -31,12 +32,17 @@
 .about-intro {
   flex-direction: column;
   text-align: center;
+  opacity: 1; /* Start fully visible */
 }
 
 /* Step 2: Image sequence */
 .sequence-canvas {
-  max-width: 100%;
-  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: cover;
 }
 
 .second-about-text {

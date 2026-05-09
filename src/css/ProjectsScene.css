@@ -1,4 +1,4 @@
-.projects-scene {
+.project-scene {
   position: relative;
   display: flex;
   align-items: center;
@@ -7,7 +7,8 @@
   height: 100%;
 }
 
-.projects-step {
+.project-step {
+  box-sizing: border-box;
   position: absolute;
   display: flex;
   align-items: center;
@@ -22,6 +23,7 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 0;
+  opacity: 0;
 }
 
 .project-image {

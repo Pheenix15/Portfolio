@@ -22,8 +22,12 @@ p {
     margin: 0;
 }
 
-button {
+.button {
   @include variables.button;
+}
+
+.alt-button {
+  @include variables.alt-button
 }
 
 section {
@@ -36,8 +40,11 @@ section {
 }
 
 @media (hover:hover) {
-  button:hover {
-    background-color: variables.$mainBlack;
-    color: variables.$secondWhite;
+  .button:hover {
+    @include variables.button-hover
+  }
+
+  .alt-button:hover {
+    @include variables.alt-button-hover
   }
 }

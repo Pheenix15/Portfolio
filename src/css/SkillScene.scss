@@ -8,6 +8,10 @@
     @include variables.step;
 }
 
+.skills-intro {
+    opacity: 0;
+}
+
 
 .skills-list {
     display: grid;
@@ -16,6 +20,7 @@
     width: 80%;
     z-index: 1;
 }
+
 
 .skill-item {
     box-sizing: border-box;
