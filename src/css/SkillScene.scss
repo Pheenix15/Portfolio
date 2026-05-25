@@ -12,6 +12,11 @@
     opacity: 0;
 }
 
+.skill-text {
+    font-size: variables.$textSize;
+    max-width: variables.$textWidth;
+}
+
 
 .skills-list {
     display: grid;

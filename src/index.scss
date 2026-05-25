@@ -1,25 +1,26 @@
 @use './css/variables';
 
 body {
-    background: variables.$mainBlack;
+  background: variables.$mainBlack;
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: unset;
+  width: 100%;
+  height: 100%;
+  object-fit: unset;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: variables.$headingFont;
-    color: variables.$mainWhite;
-    margin: 0;
+  font-family: variables.$headingFont;
+  color: variables.$mainWhite;
+  margin: 0;
 }
 
 p {
-    font-family: variables.$textFont;
-    color: variables.$secondWhite;
-    margin: 0;
+  font-family: variables.$textFont;
+  color: variables.$secondWhite;
+  margin: 0;
+  text-align: left
 }
 
 .button {
@@ -36,7 +37,7 @@ section {
 }
 
 .watermark {
-    @include variables.watermark;
+  @include variables.watermark;
 }
 
 @media (hover:hover) {

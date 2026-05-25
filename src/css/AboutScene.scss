@@ -14,8 +14,8 @@
 }
 
 .about-text {
-    font-size: 1.2em;
-    max-width: 600px;
+  font-size: variables.$textSize;
+  max-width: variables.$textWidth;
 }
 
 /* Step 1: Intro with watermark */

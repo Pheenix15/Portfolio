@@ -109,6 +109,10 @@ const AboutScene = ({localProgress} : AboutSceneProps) => {
             duration: 0.2,
             ease: "power2.out"
         }, 0.8) // Start right after the sequence starts fading out
+        tl.to(closingRef.current, {
+            opacity: 0,
+            duration: 0.05
+        }, 0.95)
 
         return () => {
             timelineRef.current?.kill();

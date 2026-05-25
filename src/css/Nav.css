@@ -1,0 +1,67 @@
+.nav {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+.menu {
+  padding: 20px;
+  height: 100vh;
+  background-color: #2b2b2b;
+}
+
+.menu-button {
+  display: flex;
+  font-size: 3em;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.8s ease-in;
+}
+
+.icon {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon.bar {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.icon.x {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.8);
+}
+
+.menu-button.open .icon.bar {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.8);
+}
+
+.menu-button.open .icon.x {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  color: #fff;
+}
+
+.section-list li {
+  list-style: none;
+  font-family: "Days One", sans-serif;
+  font-size: 1.6em;
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out;
+}/*# sourceMappingURL=Nav.css.map */

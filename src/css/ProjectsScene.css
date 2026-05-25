@@ -18,6 +18,11 @@
   padding: 20px;
 }
 
+.project-text {
+  font-size: 1.7em;
+  max-width: 600px;
+}
+
 /* Individual project */
 .project-item {
   flex-direction: column;
@@ -36,7 +41,6 @@
 
 .image-overlay {
   position: absolute;
-  background-color: rgba(10, 10, 10, 0.737254902);
   top: 0;
   left: 0;
   width: 100%;
@@ -48,18 +52,19 @@
   position: absolute;
   padding: 20px;
   max-width: 500px;
+  background-color: rgba(10, 10, 10, 0.737254902);
   z-index: 10;
 }
 
 /* Alternate positioning */
 .project-description.right {
-  right: 0;
+  right: 5%;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .project-description.left {
-  left: 0;
+  left: 5%;
   top: 50%;
   transform: translateY(-50%);
 }

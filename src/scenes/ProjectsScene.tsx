@@ -120,7 +120,7 @@ const ProjectsScene = ({localProgress}: ProjectSceneProps) => {
                         <div className="image-overlay" />
                         <picture>
                             <source srcSet={project.mobileImage} media= "(max-width: 501px)" />
-                            <source srcSet={project.tabletImage} media= "(max-width: 768px)" />
+                            <source srcSet={project.mobileImage} media= "(max-width: 768px)" />
                             <img src={project.desktopImage} alt={project.title} />
                         </picture>
                     </div>

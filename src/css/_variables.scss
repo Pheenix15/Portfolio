@@ -6,6 +6,8 @@ $transparentBlack: #0a0a0abc;
 $headingFont: "Days One", sans-serif;
 $textFont: "Courier Prime", monospace;
 $mobilePadding: 0 10px;
+$textSize: 1.7em;
+$textWidth: 600px;
 
 @mixin page-padding {
     padding: 0 40px;

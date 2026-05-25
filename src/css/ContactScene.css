@@ -18,6 +18,11 @@
   padding: 20px;
 }
 
+.contact-text {
+  font-size: 1.7em;
+  max-width: 600px;
+}
+
 /* Contact grid */
 .contact-container {
   display: flex;

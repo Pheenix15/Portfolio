@@ -18,6 +18,7 @@ p {
   font-family: "Courier Prime", monospace;
   color: #F5F7FA;
   margin: 0;
+  text-align: left;
 }
 
 .button {

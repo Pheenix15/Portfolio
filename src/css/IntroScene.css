@@ -56,9 +56,10 @@
 
 .hero-image {
   position: absolute;
-  width: 70%;
+  width: max(500px, 40%); /*Keeps size responsive*/
   right: 0px;
   bottom: 0;
+  transform: translate(10%, 0%);
   z-index: -10;
 }
 
@@ -94,8 +95,7 @@
 }
 @media (max-width: 426px) {
   .hero-image {
-    width: 100%;
-    right: -50px;
+    right: -25%;
   }
 }
 @media (max-width: 335px) {

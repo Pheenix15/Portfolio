@@ -7,6 +7,7 @@ import AboutScene from './scenes/AboutScene'
 import SkillScene from './scenes/SkillScene'
 import ProjectsScene from './scenes/ProjectsScene'
 import ContactScene from './scenes/ContactScene'
+import Nav from './components/Nav'
 
 function App() {
   const { progress } = useScrollManager()
@@ -18,10 +19,35 @@ function App() {
   const projectsProgress = useSceneProgress('projects', progress)
   const contactProgress = useSceneProgress('contact', progress)
 
-  // Determine if a scene should be visible based on global progress
-  const isSceneActive = (sceneName: SceneName): boolean => {
+  //Calculate scene opacity with overlap transitions
+  const getSceneOpacity = (sceneName: SceneName): number => {
     const range = SCENE_RANGES[sceneName]
-    return progress >= range.start && progress <= range.end
+    const transitionDuration = 0.05 // 5% overlap on each side
+    
+    // Before scene starts
+    if (progress < range.start - transitionDuration) {
+      return 0
+    }
+    
+    // Fade in at start
+    if (progress < range.start) {
+      const fadeInProgress = (progress - (range.start - transitionDuration)) / transitionDuration
+      return fadeInProgress
+    }
+    
+    // Fully visible in middle
+    if (progress >= range.start && progress <= range.end) {
+      return 1
+    }
+    
+    // Fade out at end
+    if (progress > range.end && progress < range.end + transitionDuration) {
+      const fadeOutProgress = (progress - range.end) / transitionDuration
+      return 1 - fadeOutProgress
+    }
+    
+    // After scene ends
+    return 0
   }
 
   return (
@@ -29,11 +55,13 @@ function App() {
       <div className="scroll-container" />
 
       <div className="viewport">
+        <Nav/>
+        
         <div 
           className="scene-container"
           style={{
-            opacity: isSceneActive('intro') ? 1 : 0,
-            pointerEvents: isSceneActive('intro') ? 'auto' : 'none',
+            opacity: getSceneOpacity('intro'),
+            pointerEvents: getSceneOpacity('intro') > 0 ? 'auto' : 'none',
           }}
         >
           <IntroScene localProgress={introProgress} />
@@ -42,8 +70,8 @@ function App() {
         <div 
           className="scene-container"
           style={{
-            opacity: isSceneActive('about') ? 1 : 0,
-            pointerEvents: isSceneActive('about') ? 'auto' : 'none',
+            opacity: getSceneOpacity('about'),
+            pointerEvents: getSceneOpacity('about') > 0 ? 'auto' : 'none',
           }}
         >
           <AboutScene localProgress={aboutProgress} />
@@ -52,8 +80,8 @@ function App() {
         <div 
           className="scene-container"
           style={{
-            opacity: isSceneActive('skills') ? 1 : 0,
-            pointerEvents: isSceneActive('skills') ? 'auto' : 'none',
+            opacity: getSceneOpacity('skills'),
+            pointerEvents: getSceneOpacity('skills') > 0 ? 'auto' : 'none',
           }}
         >
           <SkillScene localProgress={skillsProgress} />
@@ -62,8 +90,8 @@ function App() {
         <div 
           className="scene-container"
           style={{
-            opacity: isSceneActive('projects') ? 1 : 0,
-            pointerEvents: isSceneActive('projects') ? 'auto' : 'none',
+            opacity: getSceneOpacity('projects'),
+            pointerEvents: getSceneOpacity('projects') > 0 ? 'auto' : 'none',
           }}
         >
           <ProjectsScene localProgress={projectsProgress} />
@@ -72,8 +100,8 @@ function App() {
         <div 
           className="scene-container"
           style={{
-            opacity: isSceneActive('contact') ? 1 : 0,
-            pointerEvents: isSceneActive('contact') ? 'auto' : 'none',
+            opacity: getSceneOpacity('contact'),
+            pointerEvents: getSceneOpacity('contact') > 0 ? 'auto' : 'none',
           }}
         >
           <ContactScene localProgress={contactProgress} />

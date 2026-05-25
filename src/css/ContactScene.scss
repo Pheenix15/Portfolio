@@ -8,6 +8,11 @@
   @include variables.step
 }
 
+.contact-text {
+  font-size: variables.$textSize;
+  max-width: variables.$textWidth;
+}
+
 /* Contact grid */
 .contact-container {
   display: flex;

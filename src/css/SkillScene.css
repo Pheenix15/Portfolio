@@ -22,6 +22,11 @@
   opacity: 0;
 }
 
+.skill-text {
+  font-size: 1.7em;
+  max-width: 600px;
+}
+
 .skills-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

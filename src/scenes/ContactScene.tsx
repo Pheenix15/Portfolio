@@ -22,7 +22,7 @@ const ContactScene = ({ localProgress }: ContactSceneProps) => {
 
   // Placeholder contact methods
   const contactMethods = [
-    { label: 'Email', value: 'hello@example.com', link: 'mailto:hello@example.com', icon: HiEnvelope },
+    { label: 'Email', value: 'hello@example.com', link: 'mailto:odimmegwaof@gmail.com', icon: HiEnvelope },
     { label: 'Whatsapp', value: '+2349131592425', link: 'https://wa.me/2349131592425', icon: HiChatBubbleOvalLeftEllipsis },
     { label: 'Phone Number', value: '+2349131592425', link: 'tel:+2349131592425', icon: HiPhoneArrowDownLeft },
     
@@ -90,7 +90,7 @@ const ContactScene = ({ localProgress }: ContactSceneProps) => {
       {/* Step 1: Intro text */}
       <div ref={introRef} className="contact-step contact-intro">
         <h2 className="watermark">Contact Me</h2>
-        <p>If you are working on something and need it to be clear, reliable, and built to last, let us talk.</p>
+        <p className='contact-text'>If you are working on something and need it to be clear, reliable, and built to last, let us talk.</p>
       </div>
       
       {/* Step 2: Contact info boxes */}
@@ -105,7 +105,7 @@ const ContactScene = ({ localProgress }: ContactSceneProps) => {
                   <div className="contact-card-right">
                     <div className="contact-detail">
                       <h3>{method.label}</h3>
-                      <p>{method.value}</p>
+                      {/* <p>{method.value}</p> */}
                     </div>
                     
                     <div className="link-arrow">
@@ -116,6 +116,8 @@ const ContactScene = ({ localProgress }: ContactSceneProps) => {
               </div>
             )   
           })}
+
+          <div className="contra-hire-me-button contact-card" data-analyticsUserId="467a11d9-9412-43c9-a031-26f42152ab6d" data-theme="dark" data-username="pheenix_web"></div><script async src="https://contra.com/static/embed/sdk.js" charSet="utf-8"></script>
         </div>
       </div>
       
