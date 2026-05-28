@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "../css/IntroScene.css"
+import { navigateToScene } from "../core/navigateToScene";
 
 // Define what IntroScene should look like: "It must have a property called localProgress and it must be a number"
 interface IntroSceneProps {
@@ -51,8 +52,8 @@ const IntroScene = ({localProgress} : IntroSceneProps) => {
                 <h1 className="name">I'm Francis Odimmegwa</h1>
                 <p className="title">Front-end Engineer</p>
                 <div className="hero-buttons">
-                    <button className="button hero-contact">Contact Me</button>
-                    <button className="alt-button hero-portfolio">View my works</button>
+                    <button className="button hero-contact" onClick={() => {navigateToScene('contact')}}>Contact Me</button>
+                    <button className="alt-button hero-portfolio" onClick={() => {navigateToScene('projects')}}>View my works</button>
                 </div>
             </div>
 

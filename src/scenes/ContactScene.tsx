@@ -4,7 +4,7 @@ import '../css/ContactScene.css'
 
 import { HiChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
 import { HiEnvelope } from "react-icons/hi2";
-import { HiPhoneArrowDownLeft } from "react-icons/hi2";
+import { HiMiniVideoCamera } from "react-icons/hi2"
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 
 interface ContactSceneProps {
@@ -24,7 +24,7 @@ const ContactScene = ({ localProgress }: ContactSceneProps) => {
   const contactMethods = [
     { label: 'Email', value: 'hello@example.com', link: 'mailto:odimmegwaof@gmail.com', icon: HiEnvelope },
     { label: 'Whatsapp', value: '+2349131592425', link: 'https://wa.me/2349131592425', icon: HiChatBubbleOvalLeftEllipsis },
-    { label: 'Phone Number', value: '+2349131592425', link: 'tel:+2349131592425', icon: HiPhoneArrowDownLeft },
+    { label: 'Schedule a Call', value: 'Zoom Link', link: 'https://scheduler.zoom.us/francis-odimmegwa/intro-call', icon: HiMiniVideoCamera },
     
   ]
 
@@ -116,8 +116,6 @@ const ContactScene = ({ localProgress }: ContactSceneProps) => {
               </div>
             )   
           })}
-
-          <div className="contra-hire-me-button contact-card" data-analyticsUserId="467a11d9-9412-43c9-a031-26f42152ab6d" data-theme="dark" data-username="pheenix_web"></div><script async src="https://contra.com/static/embed/sdk.js" charSet="utf-8"></script>
         </div>
       </div>
       

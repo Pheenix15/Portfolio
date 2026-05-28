@@ -109,12 +109,12 @@ function App() {
 
         {/* Debug overlay */}
         <div className="debug-overlay">
-          <div>Global: {progress.toFixed(4)}</div>
+          {/* <div>Global: {progress.toFixed(4)}</div>
           <div>Intro: {introProgress.toFixed(4)}</div>
           <div>About: {aboutProgress.toFixed(4)}</div>
           <div>Skills: {skillsProgress.toFixed(4)}</div>
           <div>Projects: {projectsProgress.toFixed(4)}</div>
-          <div>Contact: {contactProgress.toFixed(4)}</div>
+          <div>Contact: {contactProgress.toFixed(4)}</div> */}
 
           <div className="contra-hire-me-button" data-analyticsUserId="467a11d9-9412-43c9-a031-26f42152ab6d" data-theme="dark" data-username="pheenix_web"></div><script async src="https://contra.com/static/embed/sdk.js" charSet="utf-8"></script>
         </div>
